@@ -13,10 +13,10 @@ You want to know if you can change any of these? Of course, why not? It is your 
 
 ## Usage
 
-Install `generator-node-typescript` globally.
+Install `generator-node-typescript` globally from this repo. It may take a couple minutes.
 
 ```sh
-$npm i -g generator-node-typescript
+$npm install -g git://github.com/JE-lee/generator-node-typescript.git 
 ```
 
 Create a new directory and `cd` into it.
@@ -44,6 +44,7 @@ $yo node-typescript:classlib MyNewClass [--mocha | --ava]
 
 ## Highlights of the latest release
 
+- I use nodemon to restart the application in the lib with running the dev script.
 - I use latest version of **TypeScript**.
 - I use [yarn](https://yarnpkg.com) in place of npm if it's available.
 - I use _jest_ which is a "batteries-included" testing framework with coverage built-in (optionally _mocha_ or _ava_). **You write tests in TypeScript itself**.
