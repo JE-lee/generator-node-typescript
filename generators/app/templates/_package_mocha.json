@@ -19,13 +19,15 @@
     "lint": "tslint --force --format verbose \"src/**/*.ts\"",
     "prepublishOnly": "npm run build",
     "build": "npm run format && npm run clean && npm run lint && echo Using TypeScript && tsc --version && tsc --pretty",
-    "test": "npm run build && mocha --compilers ts:ts-node/register --recursive \"test/**/*-spec.ts\"",
+    "test": "mocha --compilers ts:ts-node/register --recursive \"test/**/*-spec.ts\"",
     "coverage": "nyc --include=\"src/**/*.ts\" --reporter=text --reporter=html --reporter=lcov mocha --compilers ts:ts-node/register --recursive \"test/**/*-spec.ts\"",
     "watch": "npm run build -- --watch",
-    "watch:test": "npm run test -- --watch"
+    "watch:test": "npm run test -- --watch",
+    "dev": "npm run build && concurrently \"npm run watch\" \"nodemon lib/index.js\""
   },
   "dependencies": {},
   "devDependencies": {
+    "concurrently": "^5.1.0",
     "@types/chai": "^4.1.6",
     "@types/mocha": "^5.2.5",
     "@types/node": "^10.11.4",

@@ -27,10 +27,12 @@
     "test": "jest",
     "coverage": "jest --coverage",
     "watch": "npm run build -- --watch",
-    "watch:test": "jest --watch"
+    "watch:test": "jest --watch",
+    "dev": "npm run build && concurrently \"npm run watch\" \"nodemon lib/index.js\""
   },
   "dependencies": {},
   "devDependencies": {
+    "concurrently": "^5.1.0",
     "@types/jest": "^23.3.3",
     "@types/node": "^10.11.4",
     "coveralls": "^3.0.2",
