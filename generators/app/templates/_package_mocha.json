@@ -23,11 +23,13 @@
     "coverage": "nyc --include=\"src/**/*.ts\" --reporter=text --reporter=html --reporter=lcov mocha --compilers ts:ts-node/register --recursive \"test/**/*-spec.ts\"",
     "watch": "npm run build -- --watch",
     "watch:test": "npm run test -- --watch",
-    "dev": "npm run build && concurrently \"npm run watch\" \"nodemon lib/index.js\""
+    "ts-watch":"tsc --watch",
+    "dev": "tsc && concurrently \"npm run ts-watch\" \"nodemon lib/index.js\""
   },
   "dependencies": {},
   "devDependencies": {
     "concurrently": "^5.1.0",
+    "nodemon": "^2.0.2",
     "@types/chai": "^4.1.6",
     "@types/mocha": "^5.2.5",
     "@types/node": "^10.11.4",

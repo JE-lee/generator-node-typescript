@@ -33,6 +33,7 @@
   "dependencies": {},
   "devDependencies": {
     "concurrently": "^5.1.0",
+    "nodemon": "^2.0.2",
     "@types/jest": "^23.3.3",
     "@types/node": "^10.11.4",
     "coveralls": "^3.0.2",
