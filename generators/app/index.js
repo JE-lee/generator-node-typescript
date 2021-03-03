@@ -112,10 +112,10 @@ module.exports = Generator.extend({
         this.templatePath('_tsconfig.json'),
         this.destinationPath('tsconfig.json')
       );
-      this.fs.copy(
-        this.templatePath('_tslint.json'),
-        this.destinationPath('tslint.json')
-      );
+      // this.fs.copy(
+      //   this.templatePath('_tslint.json'),
+      //   this.destinationPath('tslint.json')
+      // );
       this.fs.copy(
         this.templatePath('editorconfig'),
         this.destinationPath('.editorconfig')
@@ -132,6 +132,15 @@ module.exports = Generator.extend({
         this.templatePath('LICENSE'),
         this.destinationPath('LICENSE'),
         { year: today.getFullYear().toPrecision(4) }
+      );
+      // eslint prettier
+      this.fs.copyTpl(
+        this.templatePath('_eslintrc.js'),
+        this.destinationPath('eslintrc.js')
+      );
+      this.fs.copyTpl(
+        this.templatePath('_prettierrc.js'),
+        this.destinationPath('prettierrc.js')
       );
     }
   },

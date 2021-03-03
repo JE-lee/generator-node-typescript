@@ -42,22 +42,6 @@ Generate a new class and test file.
 $yo node-typescript:classlib MyNewClass [--mocha | --ava]
 ```
 
-## Highlights of the latest release
-
-- I use nodemon to restart the application in the lib with running the dev script.
-- I use latest version of **TypeScript**.
-- I use [yarn](https://yarnpkg.com) in place of npm if it's available.
-- I use _jest_ which is a "batteries-included" testing framework with coverage built-in (optionally _mocha_ or _ava_). **You write tests in TypeScript itself**.
-- I use _prettier_ integrated with _tslint_ to provide no-fuss code formatting and linting.
-- I need **no global dependencies**. Every dependency such as _TypeScript_ and _tslint_ is installed as local dev dependency allowing you to freely use different versions of these for different packages.
-
-  ### Integration with VS Code
-- I configure `build`, `clean`, `lint`, `coverage`, `format` and `test` tasks that you can run using `Run Task` option.
-- You can directly run currently open source file using task `Run current file`. I use [ts-node](https://github.com/TypeStrong/ts-node) to provide this functionality.
-- You can debug currently open source file using `Debug file` launch configuration. You can also debug currently open test file using `Debug test` launch configuration without the need of compiling it first. Here is the preview -
-
-  ![TypeScript debugging in VS Code](./img/vscode-ts-debug.gif)
-
 ## License
 
 MIT
