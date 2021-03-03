@@ -136,11 +136,11 @@ module.exports = Generator.extend({
       // eslint prettier
       this.fs.copyTpl(
         this.templatePath('_eslintrc.js'),
-        this.destinationPath('eslintrc.js')
+        this.destinationPath('.eslintrc.js')
       );
       this.fs.copyTpl(
         this.templatePath('_prettierrc.js'),
-        this.destinationPath('prettierrc.js')
+        this.destinationPath('.prettierrc.js')
       );
     }
   },
