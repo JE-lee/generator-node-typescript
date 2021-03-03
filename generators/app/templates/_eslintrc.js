@@ -23,5 +23,8 @@ module.exports = {
     react: {
       version: 'detect' // Tells eslint-plugin-react to automatically detect the version of React to use
     }
+  },
+  rules: {
+    '@typescript-eslint/explicit-module-boundary-types': 'off'
   }
 }

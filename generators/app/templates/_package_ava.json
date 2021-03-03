@@ -16,7 +16,7 @@
   "scripts": {
     "clean": "rimraf lib && rimraf coverage && rimraf .nyc_output && rimraf lib_test",
     "format": "prettier --write \"{src,test}/**/*.ts\"",
-    "lint": "tslint --force --format verbose \"src/**/*.ts\"",
+    "lint": "eslint --fix src/**/*.ts",
     "prepublishOnly": "npm run build",
     "prebuild": "npm run clean && npm run format && npm run lint && echo Using TypeScript && tsc --version",
     "build": "tsc --pretty && tsc -p tsconfig.test.json --pretty",
